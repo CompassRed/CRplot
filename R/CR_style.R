@@ -1,15 +1,15 @@
 #' Add CompassRed theme to ggplot chart
 #'
 #' This function allows you to add the CompassRed theme to your ggplot graphics.
-#' @keywords CR_style
+#' @keywords theme_compassred
 #' @export
 #' @examples
 #' line <- ggplot(line_df, aes(x = year, y = lifeExp)) +
 #' geom_line(colour = "#007f7f", size = 1) +
 #' geom_hline(yintercept = 0, size = 1, colour="#333333") +
-#' CR_style()
+#' theme_compassred()
 
-CR_style <- function() {
+theme_compassred <- function() {
 
   font <- "Helvetica"
 
