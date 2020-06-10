@@ -1,0 +1,85 @@
+---
+title: "Samples"
+author: "Ryan Harrington"
+date: "6/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+data(iris)
+```
+
+```{r}
+devtools::load_all()
+theme_set(CRplot::theme_compassred())
+```
+
+# Scatterplot
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Sepal.Length,
+             y = Sepal.Width)) +
+  geom_point(color = CR_cols("CR_red")) +
+  labs(x = "Sepal Length",
+       y = "Sepal Width",
+       title = "This is a title",
+       subtitle = "This is a subtitle",
+       caption = "This is a caption")
+```
+
+# Scatterplot Faceted
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Sepal.Length,
+             y = Sepal.Width,
+             color = Species)) +
+  geom_point() +
+  facet_wrap(~ Species) +
+  labs(x = "Sepal Length",
+       y = "Sepal Width",
+       title = "This is a title",
+       subtitle = "This is a subtitle",
+       caption = "This is a caption") +
+  scale_color_CR()
+```
+
+
+# Bar Chart
+
+```{r}
+iris %>%
+  group_by(Species) %>% 
+  summarize(Sepal.Length_mean = mean(Sepal.Length)) %>% 
+  ungroup() %>% 
+  ggplot(aes(x = Species,
+             y = Sepal.Length_mean,
+             fill = Species)) +
+  geom_col() +
+  labs(x = "Sepal Length",
+       y = "Sepal Width",
+       title = "This is a title",
+       subtitle = "This is a subtitle",
+       caption = "This is a caption") +
+  scale_fill_CR()
+```
+
+# Histogram
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Sepal.Length)) +
+  geom_histogram() +
+  labs(x = "Sepal Length",
+       y = "Count",
+       title = "This is a title",
+       subtitle = "This is a subtitle",
+       caption = "This is a caption")
+```
+
