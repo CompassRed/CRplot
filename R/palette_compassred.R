@@ -26,6 +26,7 @@ compassred_colors <- c(
 #' Function to extract compassred_colors colors as hex codes
 #'
 #' @param ... Names of compassred_colors
+#' @export
 #'
 CR_cols <- function(...) {
   cols <- c(...)
@@ -51,6 +52,7 @@ CR_palettes <- list(
 #' @param palette Character name of palette in CR_palettes
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
+#' @export
 #'
 CR_pal <- function(palette = "main", reverse = FALSE, ...) {
   pal <- CR_palettes[[palette]]
@@ -87,6 +89,7 @@ scale_color_CR <- function(palette = "main", discrete = TRUE, reverse = FALSE, .
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
+#' @export
 #'
 scale_fill_CR <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
   pal <- CR_pal(palette = palette, reverse = reverse)
