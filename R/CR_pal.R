@@ -1,8 +1,22 @@
-#' Return function to interpolate a drsimonj color palette
+#' Return function to interpolate a CompassRed color palette
 #'
-#' @param palette Character name of palette in CR_palettes
+#' This function gets a pallete by name from the list ("main" by default),
+#' has a boolean condition determining whether to reverse the order or not,
+#' and additional arguments to pass on to colorRampPallete() (such as an alpha value).
+#'
+#' @references \href{https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2}{Adapted from here}
+#'
+#' @param palette Character name of palette. Colors used in palettes are sourced from [CR_cols()] Options include:
+#' * "main" - CR_red, CR_blue, CR_green
+#' * "colorblind" - cb_gray, cb_orange, cb_light_blue, cb_green, cb_yellow, cb_dark_blue, cb_orange, cb_pink
+#' * "gray" = light_gray, dark_gray
+#' @md
 #' @param reverse Boolean indicating whether the palette should be reversed
-#' @param ... Additional arguments to pass to colorRampPalette()
+#' @param ... Additional arguments to pass to [colorRampPalette()]
+#'
+#' @return Returns a function to create a color palette
+#'
+#'
 #'
 #' @export
 #'

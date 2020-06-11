@@ -2,17 +2,30 @@
 % Please edit documentation in R/CR_pal.R
 \name{CR_pal}
 \alias{CR_pal}
-\title{Return function to interpolate a drsimonj color palette}
+\title{Return function to interpolate a CompassRed color palette}
 \usage{
 CR_pal(palette = "main", reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{Character name of palette in CR_palettes}
+\item{palette}{Character name of palette. Colors used in palettes are sourced from \code{\link[=CR_cols]{CR_cols()}} Options include:
+\itemize{
+\item "main" - CR_red, CR_blue, CR_green
+\item "colorblind" = cb_gray, cb_orange, cb_light_blue, cb_green, cb_yellow, cb_dark_blue, cb_orange, cb_pink
+\item "gray" = light_gray, dark_gray
+}}
 
 \item{reverse}{Boolean indicating whether the palette should be reversed}
 
-\item{...}{Additional arguments to pass to colorRampPalette()}
+\item{...}{Additional arguments to pass to \code{\link[=colorRampPalette]{colorRampPalette()}}}
+}
+\value{
+Returns a function to create a color palette
 }
 \description{
-Return function to interpolate a drsimonj color palette
+This function gets a pallete by name from the list ("main" by default),
+has a boolean condition determining whether to reverse the order or not,
+and additional arguments to pass on to colorRampPallete() (such as an alpha value).
+}
+\references{
+\href{https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2}{Adapted from here}
 }
