@@ -19,8 +19,18 @@
 #' @return Either one or many hex codes as strings.
 #'
 #' @examples
-#' data(iris)
 #'
+#' # Returns a single hex code
+#' CR_cols("CR_green")
+#'
+#' # Returns multiple hex codes
+#' CR_cols("CR_green", "CR_red")
+#'
+#' # Returns all hex codes
+#' CR_cols()
+#'
+#' # Usage within ggplot2
+#' data(iris)
 #' iris %>%
 #'   ggplot(aes(x = Sepal.Length,
 #'              y = Sepal.Width)) +
@@ -32,7 +42,7 @@ CR_cols <- function(...) {
   cols <- c(...)
 
   # CompassRed colors
-  compassred_colors <- c(
+  CR_colors <- c(
     CR_red         = "#E83536",
     CR_blue        = "#171B2C",
     CR_green       = "#00B050",
@@ -51,5 +61,5 @@ CR_cols <- function(...) {
   if (is.null(cols))
     return (CR_colors)
 
-  compassred_colors[cols]
+  CR_colors[cols]
 }

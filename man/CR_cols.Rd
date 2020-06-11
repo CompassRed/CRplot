@@ -31,8 +31,18 @@ Either one or many hex codes as strings.
 Function to extract CompassRed colors as hex codes
 }
 \examples{
-data(iris)
 
+# Returns a single hex code
+CR_cols("CR_green")
+
+# Returns multiple hex codes
+CR_cols("CR_green", "CR_red")
+
+# Returns all hex codes
+CR_cols()
+
+# Usage within ggplot2
+data(iris)
 iris \%>\%
   ggplot(aes(x = Sepal.Length,
              y = Sepal.Width)) +
