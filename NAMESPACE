@@ -2,7 +2,6 @@
 
 export(CR_cols)
 export(CR_pal)
-export(compassred_colors)
 export(finalise_plot)
 export(scale_fill_CR)
 export(theme_compassred)

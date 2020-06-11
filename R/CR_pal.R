@@ -7,7 +7,6 @@
 #' @export
 #'
 CR_pal <- function(palette = "main", reverse = FALSE, ...) {
-  pal <- CR_palettes[[palette]]
 
   CR_palettes <- list(
     main       = CR_cols("CR_red", "CR_blue", "CR_green"),
@@ -17,6 +16,8 @@ CR_pal <- function(palette = "main", reverse = FALSE, ...) {
 
     gray       = CR_cols("light_gray", "dark_gray")
   )
+
+  pal <- CR_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
 
