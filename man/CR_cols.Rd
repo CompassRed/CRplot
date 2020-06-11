@@ -7,11 +7,35 @@
 CR_cols(...)
 }
 \arguments{
-\item{...}{Names of CompassRed colors as strings}
+\item{...}{Names of CompassRed colors as strings. Color options include:
+\itemize{
+\item "CR_red" - #E83536
+\item "CR_blue" - #171B2C
+\item "CR_green" - #00B050
+\item "cb_gray" - #999999
+\item "cb_orange" - #E69F00
+\item "cb_light_blue" - #56B4E9
+\item "cb_green" - #009E73
+\item "cb_yellow" - #F0E442
+\item "cb_dark_blue" - #0072B2
+\item "cb_dark_orange" - #D55E00
+\item "cb_pink" - #CC79A7
+\item "light_gray" - #CCCCCC
+\item "dark_gray" - #8c8c8c
+}}
 }
 \value{
-Either one or many hex codes as strings
+Either one or many hex codes as strings.
 }
 \description{
 Function to extract CompassRed colors as hex codes
+}
+\examples{
+data(iris)
+
+iris \%>\%
+  ggplot(aes(x = Sepal.Length,
+             y = Sepal.Width)) +
+  geom_point(color = CR_cols("CR_green"))
+
 }

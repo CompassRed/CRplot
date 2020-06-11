@@ -3,5 +3,6 @@
 export(CR_cols)
 export(CR_pal)
 export(finalise_plot)
+export(scale_color_CR)
 export(scale_fill_CR)
 export(theme_compassred)
