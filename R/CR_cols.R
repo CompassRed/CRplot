@@ -17,7 +17,15 @@
 #'  \item{"dark_gray"}{#8c8c8c}
 #'  }
 #'
-#' @return Either one or many hex codes as strings
+#' @return Either one or many hex codes as strings.
+#'
+#' @examples
+#' data(iris)
+#'
+#' iris %>%
+#'   ggplot(aes(x = Sepal.Length,
+#'              y = Sepal.Width)) +
+#'   geom_point(color = CR_cols("CR_green"))
 #'
 #' @export
 #'
