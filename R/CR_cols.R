@@ -43,19 +43,19 @@ CR_cols <- function(...) {
 
   # CompassRed colors
   CR_colors <- c(
-    CR_red         = "#E83536",
-    CR_blue        = "#171B2C",
-    CR_green       = "#00B050",
-    cb_gray        = "#999999",
-    cb_orange      = "#E69F00",
-    cb_light_blue  = "#56B4E9",
-    cb_green       = "#009E73",
-    cb_yellow      = "#F0E442",
-    cb_dark_blue   = "#0072B2",
-    cb_dark_orange = "#D55E00",
-    cb_pink        = "#CC79A7",
-    light_gray     = "#CCCCCC",
-    dark_gray      = "#8c8c8c"
+    CR_red         = CR_red(),
+    CR_blue        = CR_blue(),
+    CR_green       = CR_green(),
+    cb_gray        = cb_gray(),
+    cb_orange      = cb_orange(),
+    cb_light_blue  = cb_light_blue(),
+    cb_green       = cb_green(),
+    cb_yellow      = cb_yellow(),
+    cb_dark_blue   = cb_dark_blue(),
+    cb_dark_orange = cb_dark_orange(),
+    cb_pink        = cb_pink(),
+    light_gray     = light_gray(),
+    dark_gray      = dark_gray()
   )
 
   if (is.null(cols))
