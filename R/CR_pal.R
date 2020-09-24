@@ -25,10 +25,20 @@ CR_pal <- function(palette = "main", reverse = FALSE, ...) {
   CR_palettes <- list(
     main       = CR_cols("CR_red", "CR_blue", "CR_green"),
 
+    full       = CR_cols("forest_blues", "CR_green", "aurora_green", "dupain",
+                         "squash_blossom", "carrot_orange", "CR_red", "american_river"),
+
     colorblind = CR_cols("cb_gray", "cb_orange", "cb_light_blue", "cb_green",
                          "cb_yellow", "cb_dark_blue", "cb_dark_orange", "cb_pink"),
 
-    gray       = CR_cols("light_gray", "dark_gray")
+    gray       = CR_cols("light_gray", "dark_gray"),
+
+    sequential = CR_cols("city_lights", "forest_blues"),
+
+    diverging  = CR_cols("carrot_orange", "city_lights", "forest_blues"),
+
+    pos_neg    = CR_cols("CR_red", "city_lights", "forest_blues")
+
   )
 
   pal <- CR_palettes[[palette]]

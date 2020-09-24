@@ -14,6 +14,16 @@
 #' * "cb_pink" - #CC79A7
 #' * "light_gray" - #CCCCCC
 #' * "dark_gray" - #8c8c8c
+#' * "forest_blues" - #0A3D62
+#' * "reef_encounter" - #079992
+#' * "aurora_green" - #78E08F
+#' * "dupain" - #60A3BC
+#' * "squash_blossom" - #F6B93B
+#' * "carrot_orange" - #E58E26
+#' * "mandarin_red" - #E55039
+#' * "american_river" - #636E72
+#' * "dracula_orchid" - #2D3436
+#' * "city_lights" - #DFE6E9
 #' @md
 #'
 #' @return Either one or many hex codes as strings.
@@ -55,7 +65,17 @@ CR_cols <- function(...) {
     cb_dark_orange = cb_dark_orange(),
     cb_pink        = cb_pink(),
     light_gray     = light_gray(),
-    dark_gray      = dark_gray()
+    dark_gray      = dark_gray(),
+    forest_blues   = forest_blues(),
+    reef_encounter = reef_encounter(),
+    aurora_green   = aurora_green(),
+    dupain         = dupain(),
+    squash_blossom = squash_blossom(),
+    carrot_orange  = carrot_orange(),
+    mandarin_red   = mandarin_red(),
+    american_river = american_river(),
+    dracula_orchid = dracula_orchid(),
+    city_lights    = city_lights()
   )
 
   if (is.null(cols))
