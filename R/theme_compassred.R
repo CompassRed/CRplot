@@ -11,7 +11,7 @@
 
 theme_compassred <- function() {
 
-  font <- "Helvetica"
+  font <- "Arial"
 
   ggplot2::theme_minimal(base_size = 8) %+replace%
     ggplot2::theme(
@@ -19,17 +19,18 @@ theme_compassred <- function() {
       # This sets the font, size, type and colour of text for the chart's title
       plot.title = ggplot2::element_text(
         family = font,
-        size  = 12,
+        size  = 14,
         face  = "bold",
-        color = "#222222"
+        color = dracula_orchid()
       ),
       # This sets the font, size, type and colour of text for the chart's
       # subtitle, as well as setting a margin between the title and the subtitle
       plot.subtitle = ggplot2::element_text(
         family = font,
-        size   = 10,
+        size   = 12,
         face = "italic",
-        margin = ggplot2::margin(9, 0, 9, 0)
+        margin = ggplot2::margin(9, 0, 9, 0),
+        color = american_river()
       ),
       # plot.caption = ggplot2::element_blank(),
       # This leaves the caption text element empty, because it is set elsewhere
@@ -49,7 +50,7 @@ theme_compassred <- function() {
       legend.text       = ggplot2::element_text(
         family = font,
         size   = 8,
-        color  = "#222222"
+        color  = american_river()
       ),
 
       ## Axis format
@@ -57,11 +58,14 @@ theme_compassred <- function() {
       # setting the margins and removes lines and ticks. In some cases, axis
       # lines and axis ticks are things we would want to have in the chart - the
       # cookbook shows examples of how to do so.
-      axis.title = ggplot2::element_text(face = "bold"),
+      axis.title = ggplot2::element_text(
+        face = "bold",
+        size = 10,
+        color = american_river()),
       axis.text  = ggplot2::element_text(
         family = font,
-        size   = 8,
-        color  = "#222222"
+        size   = 9,
+        color  = american_river()
       ),
       # axis.text.x = ggplot2::element_text(margin = ggplot2::margin(5,
       #                                                              b = 10)),
@@ -72,6 +76,7 @@ theme_compassred <- function() {
       # This removes all minor gridlines and adds major y gridlines. In many
       # cases you will want to change this to remove y gridlines and add x
       # gridlines. The cookbook shows you examples for doing so
+      panel.grid = ggplot2::element_line(color = city_lights()),
       # panel.grid.minor   = ggplot2::element_blank(),
       # panel.grid.major.y = ggplot2::element_line(color = "#cbcbcb"),
       # panel.grid.major.x = ggplot2::element_line(color = "#cbcbcb"),
@@ -85,10 +90,10 @@ theme_compassred <- function() {
       # This sets the panel background for facet-wrapped plots to white,
       # removing the standard grey ggplot background colour and sets the title
       # size of the facet-wrap title to font size 22)
-      strip.background = ggplot2::element_rect(fill  = "#222222",
-                                               color = "#222222"),
+      strip.background = ggplot2::element_rect(fill  = city_lights(),
+                                               color = city_lights()),
       strip.text       = ggplot2::element_text(size  = 10,
                                                face  = "bold",
-                                               color = "white")
+                                               color = american_river())
     )
 }
