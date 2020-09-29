@@ -21,16 +21,17 @@ theme_compassred <- function() {
         family = font,
         size  = 14,
         face  = "bold",
-        color = dracula_orchid()
+        color = dracula_orchid(),
+        hjust = 0
       ),
       # This sets the font, size, type and colour of text for the chart's
       # subtitle, as well as setting a margin between the title and the subtitle
       plot.subtitle = ggplot2::element_text(
         family = font,
         size   = 12,
-        face = "italic",
-        margin = ggplot2::margin(9, 0, 9, 0),
-        color = american_river()
+        margin = ggplot2::margin(0, 0, 18, 0),
+        color = american_river(),
+        hjust = 0
       ),
       # plot.caption = ggplot2::element_blank(),
       # This leaves the caption text element empty, because it is set elsewhere
@@ -94,6 +95,13 @@ theme_compassred <- function() {
                                                color = city_lights()),
       strip.text       = ggplot2::element_text(size  = 10,
                                                face  = "bold",
-                                               color = american_river())
+                                               color = american_river()),
+
+      plot.caption = element_text(
+        size = 9,
+        color = american_river(),
+        hjust = 1
+      )
+
     )
 }

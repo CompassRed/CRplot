@@ -25,7 +25,7 @@ theme_set(CRplot::theme_compassred())
 iris %>% 
   ggplot(aes(x = Sepal.Length,
              y = Sepal.Width)) +
-  geom_point(color = CR_cols("CR_red")) +
+  geom_point(color = CR_red()) +
   labs(x = "Sepal Length",
        y = "Sepal Width",
        title = "This is a title",
@@ -67,7 +67,7 @@ iris %>%
        title = "This is a title",
        subtitle = "This is a subtitle",
        caption = "This is a caption") +
-  scale_fill_CR()
+  scale_fill_CR(palette = "full")
 ```
 
 # Histogram
@@ -75,7 +75,7 @@ iris %>%
 ```{r}
 iris %>% 
   ggplot(aes(x = Sepal.Length)) +
-  geom_histogram() +
+  geom_histogram(fill = squash_blossom()) +
   labs(x = "Sepal Length",
        y = "Count",
        title = "This is a title",
